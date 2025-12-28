@@ -1,4 +1,5 @@
 package com.pro.Back_end_FinArcher.models;
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -13,12 +14,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@DiscriminatorValue("ENCAISSEMENT")
 public class Encaissement extends Transaction{
 
     // Liens avec classes externes
     @ManyToOne
-    @JoinColumn(name = "encaissement_id")
-    private Encaissement encaissement;
+    @JoinColumn(name = "portefeuille_id")
+    private Portefeuille portefeuille;
 
     @ManyToOne
     @JoinColumn(name = "acteur_id")

@@ -1,4 +1,5 @@
 package com.pro.Back_end_FinArcher.models;
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -12,6 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@DiscriminatorValue("DEPENSE")
 public class Depense extends Transaction{
     private int quantite;
     private double solde;

@@ -13,7 +13,6 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 public abstract class Categorie {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
