@@ -1,0 +1,10 @@
+
+logging:
+  level:
+    root: INFO
+    com.pro.Back_end_FinArcher: DEBUG
+    org.hibernate.SQL: off
+
+
+  pattern:
+    console: "%d{dd:MM:yyyy} %d{HH:mm:ss} %highlight(%-5level) [%X{user}] %magenta([%thread]) %cyan(%logger{15}) : %msg%n"

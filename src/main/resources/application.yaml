@@ -1,3 +1,33 @@
+server:
+  port: 8080
+
+
 spring:
   application:
     name: Back-end-FinArcher
+
+  profiles:
+    active: dev
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+    import: classpath:logs-dev.yml
+
+
