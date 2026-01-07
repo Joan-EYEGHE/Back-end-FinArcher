@@ -1,4 +1,4 @@
-package com.pro.Back_end_FinArcher.models;
+package com.pro.Back_end_FinArcher.data.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
@@ -23,9 +23,9 @@ public class Transaction {
     private long id;
 
     @CreationTimestamp
-    @Column(updatable = false)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private LocalDateTime createAt;
+    @Column(nullable = false,  updatable = false)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime createdAt;
 
     private String motif;
 

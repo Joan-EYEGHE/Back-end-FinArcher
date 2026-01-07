@@ -1,10 +1,12 @@
-package com.pro.Back_end_FinArcher.models;
+package com.pro.Back_end_FinArcher.data.models;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -12,7 +14,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public abstract class Categorie {
+public class Portefeuille {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -23,5 +26,6 @@ public abstract class Categorie {
 
     // Liens avec classes externes
     @OneToMany(cascade = CascadeType.ALL)
-    List<Depense> depenses;
+    List<Encaissement> encaissements = new ArrayList<>();
+
 }

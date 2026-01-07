@@ -1,4 +1,4 @@
-package com.pro.Back_end_FinArcher.auth;
+package com.pro.Back_end_FinArcher.data.auth;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
